@@ -1,0 +1,25 @@
+<Window x:Class="WpfProductLookup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Elektro-Bud - wyszukiwanie produktu"
+        Width="560"
+        Height="470"
+        MinWidth="420"
+        MinHeight="390">
+  <StackPanel Margin="24">
+    <TextBlock Text="Wyszukiwanie produktu" FontSize="24" FontWeight="Bold" />
+    <TextBlock Text="Wpisz kod EAN lub nazwę produktu. Dane są przykładowe." Margin="0,8,0,16" TextWrapping="Wrap" />
+    <TextBlock Text="Kod EAN lub nazwa" Margin="0,0,0,6" />
+    <TextBox x:Name="SearchBox" Height="36" FontSize="16" />
+    <Button Content="Szukaj" Height="38" Margin="0,10,0,0" IsDefault="True" Click="SearchButton_Click" />
+    <TextBlock x:Name="MessageText" Text="Wpisz kod EAN lub nazwę produktu." Margin="0,14,0,8" TextWrapping="Wrap" />
+    <Border x:Name="ResultCard" Padding="16" BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Visibility="Collapsed">
+      <StackPanel>
+        <TextBlock x:Name="ResultName" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" />
+        <TextBlock x:Name="ResultEan" Margin="0,10,0,0" />
+        <TextBlock x:Name="ResultCategory" Margin="0,6,0,0" />
+        <TextBlock x:Name="ResultLocation" Margin="0,6,0,0" />
+      </StackPanel>
+    </Border>
+  </StackPanel>
+</Window>
